@@ -1,29 +1,28 @@
-// let sentence ="java is fun";
-// let reversedSentence= sentence.split(" ").reverse().join(" ");
-// console.log(reversedSentence);
-
-// function isRotation(s1,s2){
-//     if
-// }
-
-// function isRotation(s1,s2){
-//     if(s1.length!==s2.length){
-//         return false;
-//     }
-//     return (s1+s1).includes(s2);
-// }
-// let s1 ="abcd";
-// let s2="cdab";
-// if(isRotation(s1,s2)){
-//     console.log("Rotation");
-// }else{
-//     console.log("Not a rotation")
-// }
 
 
-// 
+const fs = require('fs');
+const path = require('path');
 
-function firstNonRepeating(str){
-    for(
-        let i=0;i<str.length;i++
-    )}
+// Input and output file paths
+const inputFile = path.join(__dirname, 'input.txt');
+const outputFile = path.join(__dirname, 'wordcount.txt');
+
+// Read the input file
+fs.readFile(inputFile, 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading input file:', err);
+    return;
+  }
+
+  // Count words by splitting on whitespace
+  const wordCount = data.trim().split(/\s+/).length;
+
+  // Write the word count to the output file
+  fs.writeFile(outputFile, `Word count: ${wordCount}`, (err) => {
+    if (err) {
+      console.error('Error writing output file:', err);
+    } else {
+      console.log(`Word count written to ${outputFile}`);
+    }
+  });
+});
