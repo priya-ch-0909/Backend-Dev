@@ -1,0 +1,19 @@
+{
+  "name": "db-diagram.io",
+  "version": "1.0.0",
+  "description": "todo crud operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Backend-Dev"
+  },
+  "keywords": [
+    "npm",
+    "node"
+  ],
+  "author": "priya",
+  "license": "ISC"
+}
